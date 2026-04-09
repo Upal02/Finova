@@ -1,0 +1,210 @@
+# 🚀 Finova – PERN Stack Financial Application
+
+## 📌 Overview
+
+**Finova** is a full-stack financial management application built using the **PERN stack (PostgreSQL, Express.js, React.js, Node.js)**. The application provides role-based access control where **Users**, **Analysts**, and **Admins** interact with the system based on their permissions.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js (JavaScript)
+* Tailwind CSS
+* Redux (for state management and API handling)
+
+### Backend
+
+* Node.js
+* Express.js
+* JWT (Authentication)
+* Joi (Validation)
+
+### Database
+
+* PostgreSQL
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow these steps carefully to run the project locally:
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone <your-repository-url>
+cd finova
+```
+
+---
+
+### 2️⃣ Install Dependencies
+
+#### Frontend
+
+```bash
+cd frontend
+npm install
+```
+
+#### Backend
+
+```bash
+cd backend
+npm install
+```
+
+---
+
+### 3️⃣ Setup PostgreSQL Database
+
+* Install and run PostgreSQL locally
+* Create a database (e.g., `finova`)
+* Configure your database credentials in the backend config file:
+
+```env
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_HOST=localhost
+DB_PORT=5432
+DB_DATABASE=finova
+SECRET_KEY=MYTOKENSECRAT@123456
+```
+
+---
+
+### 4️⃣ Run the Application
+
+#### Start Frontend
+
+```bash
+cd frontend
+npm run dev
+```
+
+#### Start Backend
+
+```bash
+cd backend
+node index.js
+```
+
+> ⚠️ Ensure both frontend and backend servers are running simultaneously.
+
+* Frontend runs on: `http://localhost:5173` (default Vite)
+* Backend runs on: `http://localhost:3000`
+
+---
+
+## 🔄 Application Workflow
+
+### 🔹 Frontend Flow
+
+* Built using **React.js** with **Tailwind CSS** for UI
+* Uses **Redux** to manage state and handle API calls
+* API calls are structured inside an **actions folder**
+* Sends requests to backend APIs for authentication and data operations
+
+---
+
+### 🔹 Backend Flow
+
+* Built using **Node.js + Express.js**
+* Handles API requests from frontend
+* Uses **JWT (JSON Web Token)** for authentication and authorization
+* Uses **Joi** for request validation
+* Connects to **PostgreSQL database** for data storage
+
+---
+
+### 🔹 Data Flow
+
+1. User interacts with frontend dashboard
+2. Redux dispatches API actions
+3. Backend receives request via Express routes
+4. JWT verifies user authentication
+5. Joi validates request data
+6. PostgreSQL performs database operations
+7. Response sent back to frontend and UI updates accordingly
+
+---
+
+## 👥 User Roles & Features
+
+### 👤 User
+
+* Login securely
+* View personal data and credentials
+
+### 📊 Analyst
+
+* Login access
+* View all users and their data from database
+
+### 🛠️ Admin
+
+* Full access
+* Perform **CRUD operations** (Create, Read, Update, Delete) on users
+* Manage system data
+
+---
+
+## 🔐 Authentication & Security
+
+* JWT-based authentication system
+* Secure token handling
+* Role-based access control implemented
+
+---
+
+## 📂 Project Structure (Simplified)
+
+```
+finova/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── redux/
+│   │   │   └── actions/
+│   │   └── App.jsx
+│
+├── backend/
+│   ├── controllers/
+│   ├── routes/
+│   ├── middleware/
+│   ├── config/
+│   └── index.js
+```
+
+---
+
+## ✅ Key Features
+
+* Full PERN stack implementation
+* Role-based authentication (User, Analyst, Admin)
+* Secure API handling with JWT
+* Input validation with Joi
+* Clean UI with Tailwind CSS
+* Scalable architecture using Redux
+
+---
+
+## 📌 Notes
+
+* Make sure PostgreSQL service is running before starting backend
+* Ensure correct database credentials are configured
+* Both frontend and backend must run simultaneously for proper functionality
+
+---
+
+## 📧 Conclusion
+
+Finova is a scalable and secure financial application demonstrating full-stack development using modern technologies with clean architecture and role-based access control.
+
+---
+
+**Happy Coding! 🚀**
